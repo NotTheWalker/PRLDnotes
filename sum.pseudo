@@ -1,0 +1,24 @@
+start
+    Declarations
+        num number
+        num sum
+        num product
+        num QUIT = 0
+    output "Enter a number or ", QUIT, " to quit"
+    input number
+    while <> QUIT
+        displayNumbers(number)
+        sum = calcSum(number)
+        product = calcProduct
+        output "The sum is ", sum, " and the product is ", product
+        output "Enter a number or ", QUIT, " to quit"
+        input number
+    endwhile
+stop
+
+void displayNumbers(num x)
+return
+
+num calcSum(num x)
+    Declarations
+        num result
