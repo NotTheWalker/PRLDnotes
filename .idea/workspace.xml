@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a33ca027-8821-48f9-9610-a603b43b1ac4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CakeShop.pseudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assignment_05-06/question1.pseudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TakeHomeTest/question-1_3.pseudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TakeHomeTest/question-2_1.pseudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TakeHomeTest/question-3.pseudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class_26-05/player.pseudo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupExercise.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PRLDnotes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PRLDnotes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arithmetic.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/atm.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/average.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insurance.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverse.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sum.pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sum2.pseudo" beforeDir="false" />
-    </list>
+    <list default="true" id="a33ca027-8821-48f9-9610-a603b43b1ac4" name="Changes" comment="Bringing git up to date" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,8 +14,12 @@
     <option name="printScope" value="1" />
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2PMUmD48l0ltBwLWJPMFiMkUmIN" />
   <component name="ProjectViewState">
@@ -127,10 +112,41 @@
       <workItem from="1685188874759" duration="178000" />
       <workItem from="1685607010026" duration="3275000" />
       <workItem from="1685695374488" duration="5380000" />
+      <workItem from="1685967774446" duration="210000" />
     </task>
+    <task id="LOCAL-00001" summary="Bringing git up to date">
+      <created>1685967806306</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685967806306</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Bringing git up to date">
+      <created>1685967902514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685967902514</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bringing git up to date" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bringing git up to date" />
   </component>
 </project>
