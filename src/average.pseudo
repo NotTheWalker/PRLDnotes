@@ -24,6 +24,7 @@ num[] inputTwentyNumbers(num currentLength)
             newNumbers[x] =
         x = x+1
     endwhile
+    //TODO: finish this
 
 
 

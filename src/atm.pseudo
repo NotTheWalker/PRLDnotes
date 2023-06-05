@@ -78,5 +78,5 @@ num deposit(num curBalance)
 return curBalance
 
 void balance()
-
+    //TODO: Implement balance function
 return

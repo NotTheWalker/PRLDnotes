@@ -1,0 +1,20 @@
+start
+    Declarations
+        num SIZE = 10
+        num array[SIZE] = 3, 5, 9, 8, 1, 2, 4, 7, 6, 0
+        num highest
+    highest = findHighest(array, SIZE)
+    output "The highest number is ", highest
+stop
+
+num findHighest(num[] array, num SIZE)
+    Declarations
+        num highest
+        num i
+    highest = array[0]
+    for i = 0 to SIZE - 1 step 1
+        if array[i] > highest then
+            highest = array[i]
+        endif
+    endfor
+return highest

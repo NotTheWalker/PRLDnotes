@@ -1,21 +1,22 @@
-//┌───────────────────────────────────────────────────────────────────┐
-//│Cake                                                               │
-//├───────────────────────────────────────────────────────────────────┤
-//│-cakeFlavour: string                                               │
-//│-icingFlavour: string                                              │
-//│-diameter: num                                                     │
-//│-price: num                                                        │
-//├───────────────────────────────────────────────────────────────────┤
-//│+setCakeFlavour(flavour: string): void                             │
-//│+setIcingFlavour(flavour: string): void                            │
-//│+setDiameter(size: num): void                                      │
-//│+setPrice(cost: num): void                                         │
-//│+getCakeFlavour(): string                                          │
-//│+getIcingFlavour(): string                                         │
-//│+getDiameter(): num                                                │
-//│+getPrice(): num                                                   │
-//└───────────────────────────────────────────────────────────────────┘
-
+*/
+┌───────────────────────────────────────────────────────────────────┐
+│Cake                                                               │
+├───────────────────────────────────────────────────────────────────┤
+│-cakeFlavour: string                                               │
+│-icingFlavour: string                                              │
+│-diameter: num                                                     │
+│-price: num                                                        │
+├───────────────────────────────────────────────────────────────────┤
+│+setCakeFlavour(flavour: string): void                             │
+│+setIcingFlavour(flavour: string): void                            │
+│+setDiameter(size: num): void                                      │
+│+setPrice(cost: num): void                                         │
+│+getCakeFlavour(): string                                          │
+│+getIcingFlavour(): string                                         │
+│+getDiameter(): num                                                │
+│+getPrice(): num                                                   │
+└───────────────────────────────────────────────────────────────────┘
+/*
 
 class Cake
     Declarations

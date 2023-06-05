@@ -1,11 +1,12 @@
-//old
+//Example showing difference between old and new syntax
+//old syntax uses nested if statements
 if x > 10 then
     if y > 1 then
         output "Y"
     endif
 endif
 
-//new
+//new syntax uses AND to make compound conditions
 if x > 10 AND y > 1 then
     output "Y"
 endif
