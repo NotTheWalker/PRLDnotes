@@ -1,0 +1,106 @@
+//┌───────────────────────────────────────────────────────────────────┐
+//│Cake                                                               │
+//├───────────────────────────────────────────────────────────────────┤
+//│-cakeFlavour: string                                               │
+//│-icingFlavour: string                                              │
+//│-diameter: num                                                     │
+//│-price: num                                                        │
+//├───────────────────────────────────────────────────────────────────┤
+//│+setCakeFlavour(flavour: string): void                             │
+//│+setIcingFlavour(flavour: string): void                            │
+//│+setDiameter(size: num): void                                      │
+//│+setPrice(cost: num): void                                         │
+//│+getCakeFlavour(): string                                          │
+//│+getIcingFlavour(): string                                         │
+//│+getDiameter(): num                                                │
+//│+getPrice(): num                                                   │
+//└───────────────────────────────────────────────────────────────────┘
+
+
+class Cake
+    Declarations
+        private string cakeFlavour
+        private string icingFlavour
+        private num diameter
+        private num price
+
+    public void setCakeFlavour(string flavour)
+        cakeFlavour = flavour
+    return
+
+    public void setIcingFlavour(string flavour)
+        icingFlavour = flavour
+    return
+
+    public void setDiameter(num size)
+        diameter = size
+    return
+
+    public void setPrice(num cost)
+        price = cost
+    return
+
+    public string getCakeFlavour()
+    return cakeFlavour
+
+    public string getIcingFlavour()
+    return icingFlavour
+
+    public num getDiameter()
+    return diameter
+
+    public num getPrice()
+    return price
+
+endClass
+
+start
+    Declarations
+        Cake cake1
+        Cake cake2
+    output "Capturing cake 1 data..."
+    cake1 = captureCakeData()
+    output "Capturing cake 2 data..."
+    cake2 = captureCakeData()
+    output "Cake 1: "
+    displayCakeData(cake1)
+    output "Cake 2: "
+    displayCakeData(cake2)
+stop
+
+Cake captureCakeData()
+    Declarations
+        Cake cake
+        string flavour
+        string icing
+        num size
+        num cost
+    output "Enter the cake flavour: "
+    input flavour
+    output "Enter the icing flavour: "
+    input icing
+    output "Enter the cake size: "
+    input size
+    output "Enter the cake price: "
+    input cost
+    cake.setCakeFlavour(flavour)
+    cake.setIcingFlavour(icing)
+    cake.setDiameter(size)
+    cake.setPrice(cost)
+return cake
+
+void displayCakeData(Cake cake)
+    Declarations
+        string flavour
+        string icing
+        num size
+        num cost
+    flavour = cake.getCakeFlavour()
+    icing = cake.getIcingFlavour()
+    size = cake.getDiameter()
+    cost = cake.getPrice()
+    output "Cake flavour: " + flavour
+    output "Icing flavour: " + icing
+    output "Cake size: " + size
+    output "Cake price: " + cost
+return

@@ -1,0 +1,138 @@
+start
+    Declarations
+        num LENGTH = 10 // number of learners
+        string learners[LENGTH]
+        num marks[LENGTH]
+        num i = 0 // counter
+        num valid = 0
+    while i < LENGTH
+        learners[i] = getName()
+        marks[i] = getMark()
+        // check if mark is between 0 and 100
+        valid = verifyBetween0And100(marks[i])
+        while valid = 0 // if not,
+            output "Invalid mark" // print error message
+            marks[i] = getMark() // get mark again
+            // check if mark is between 0 and 100
+            valid = verifyBetween0And100(marks[i])
+        endwhile
+        i = i + 1 // increment counter
+    endwhile
+    printClassReport(learners, marks, LENGTH) // print class report
+stop
+
+num verifyBetween0And100(num mark)
+    Declarations
+        num response
+    if mark < 0 OR mark > 100 then // if mark is not between 0 and 100,
+        response = 0
+    else
+        response = 1
+    endif
+return response
+
+string getName()
+    Declarations
+        string name
+    output "Enter name: "
+    input name
+return name
+
+num getMark()
+    Declarations
+        num mark
+    output "Enter mark: "
+    input mark
+return mark
+
+num calculateAverage(num marks[], num LENGTH)
+    Declarations
+        num i = 0 // counter
+        num total = 0
+        num average
+    while i < LENGTH // while counter is less than number of learners
+        total = total + marks[i] // add mark to total
+        i = i + 1 // increment counter
+    endwhile
+    average = total / LENGTH // calculate average
+return average
+
+num indexHigh(num marks[], num LENGTH)
+    Declarations
+        num i = 0
+        num highestMark
+        num indexHighestMark = 0
+    highestMark = marks[0]
+    while i < LENGTH
+        if marks[i] > highestMark then
+            highestMark = marks[i]
+            indexHighestMark = i
+        endif
+        i = i + 1
+    endwhile
+return indexHighestMark
+
+num indexLow(num marks[], num LENGTH)
+    Declarations
+        num i = 0
+        num lowestMark
+        num indexLowestMark = 0
+    lowestMark = marks[0]
+    while i < LENGTH
+        if marks[i] < lowestMark then
+            lowestMark = marks[i]
+            indexLowestMark = i
+        endif
+        i = i + 1
+    endwhile
+return indexLowestMark
+
+void printClassReport(string learners[], num marks[], num LENGTH)
+    Declarations
+        num i = 0
+        string TAB = "    "
+        string category
+        num average
+        num indexHighMark
+        num indexLowMark
+    average = calculateAverage(marks, LENGTH)
+    indexHighMark = indexHigh(marks, LENGTH) // get index of highest mark
+    indexLowMark = indexLow(marks, LENGTH) // get index of lowest mark
+    output "CLASS REPORT"
+    output "============" // print a border
+    output "NAME", TAB, "MARK ACHIEVED", TAB, "CATEGORY"
+    while i < LENGTH // while counter is less than number of learners
+        category = getCategory(marks[i]) // get category of mark
+        // print name, mark and category
+        output learners[i], TAB, marks[i], TAB, category
+        i = i + 1 // increment counter
+    endwhile
+    output "============"
+    output "AVERAGE CLASS MARK: ", TAB, average // print average
+    high(learners, indexHighMark) // print highest mark
+    low(learners, indexLowMark) // print lowest mark
+return
+
+void high(string learners[], num index)
+    Declarations
+        string TAB = "    "
+    output "HIGHEST MARK: ", TAB, learners[index]
+return
+
+void low(string learners[], num index)
+    Declarations
+        string TAB = "    "
+    output "LOWEST MARK: ", TAB, learners[index]
+return
+
+string getCategory(num mark)
+    Declarations
+        string category
+    if mark < 50 then // if mark is less than 50,
+        category = "Fail" // fail
+    else if mark >= 75 then // if mark is greater than or equal to 75,
+        category = "Distinction" // distinction
+    else // otherwise,
+        category = "Pass" // pass
+    endif
+return category

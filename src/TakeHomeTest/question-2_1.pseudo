@@ -1,0 +1,35 @@
+start
+    Declarations
+        num LENGTH = 12
+        num totalOrders = 0
+        num discount = 0 // 0% discount by default
+        num purchases[LENGTH]
+        num counter = 0
+    while counter < LENGTH // loop through each month
+        // get the number of purchases for the current month
+        purchases[counter] = inputPurchase(counter + 1)
+        // add the number of purchases to the total
+        totalOrders = totalOrders + purchases[counter]
+        // increment the counter
+        counter = counter + 1
+    endwhile
+    if totalOrders >= 11 then
+        // if the total number of orders is greater than or equal to 11
+        discount = 20
+    else if totalOrders >= 6 then
+        // if the total number of orders is greater than or equal to 6
+        discount = 10
+    endif
+    // output the total number of orders and the discount
+    output "Total number of orders: ", totalOrders
+    output "Discount: ", discount, "%"
+stop
+
+num inputPurchase(num curMonth)
+    Declarations
+        num purchase = 0
+    // prompt the user for the number of purchases for the current month
+    output "Enter the number of purchases for month " + curMonth
+    // get the number of purchases for the current month
+    input purchase
+return purchase

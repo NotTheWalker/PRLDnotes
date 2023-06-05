@@ -1,0 +1,53 @@
+start
+    Declarations
+        num LENGTH = 5
+        string product[LENGTH]
+        num price[LENGTH]
+        num counter = 0
+        num newPrice = 0
+        num percentage = 0.06
+    while counter < LENGTH // loop through each product
+        // populate the product and price arrays
+        if counter = 0 then
+            // if the counter is 0, then the product is rice
+            product[counter] = "Rice"
+            price[counter] = 25.99
+        else if counter = 1 then
+            // if the counter is 1, then the product is sugar
+            product[counter] = "Sugar"
+            price[counter] = 22.50
+        else if counter = 2 then
+            // if the counter is 2, then the product is tea
+            product[counter] = "Tea"
+            price[counter] = 12.00
+        else if counter = 3 then
+            // if the counter is 3, then the product is porridge
+            product[counter] = "Porridge"
+            price[counter] = 20.00
+        else if counter = 4 then
+            // if the counter is 4, then the product is milk
+            product[counter] = "Milk"
+            price[counter] = 18.50
+        endif
+        // increment the counter
+        counter = counter + 1
+    endwhile
+    // reset the counter
+    counter = 0
+    while counter < LENGTH // loop through each product
+        // calculate the new price
+        newPrice = calculatePrice(price[counter], percentage)
+        // store the new price in the price array
+        price[counter] = newPrice
+        // output the product name and the new price
+        output product[counter], " - R", price[counter]
+        // increment the counter
+        counter = counter + 1
+    endwhile
+stop
+
+num calculatePrice(num price, num percentage)
+    Declarations
+        num newPrice = 0
+    newPrice = price + (price * percentage)
+return newPrice

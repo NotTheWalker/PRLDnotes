@@ -1,0 +1,17 @@
+start
+    Declarations
+        num totalPOS1
+        num totalPOS2
+        num totalPOS3
+        num averageSales
+    output "Enter total sales for POS 1"
+    input totalPOS1
+    output "Enter total sales for POS 2"
+    input totalPOS2
+    output "Enter total sales for POS 3"
+    input totalPOS3
+    //calculate average sales
+    averageSales = (totalPOS1 + totalPOS2 + totalPOS3) / 3
+    //display average sales
+    output "The average sales for the day is " + averageSales
+stop

@@ -1,0 +1,133 @@
+*/
+┌───────────────────────────────────────────────────────────────────┐
+│Player                                                             │
+├───────────────────────────────────────────────────────────────────┤
+│-playerName : string                                               │
+│-playerNumber : num                                                │
+├───────────────────────────────────────────────────────────────────┤
+│+setPlayerName(name : string) : void                               │
+│+getPlayerName() : string                                          │
+│+setPlayerNumber(number : num) : void                              │
+│+getPlayerNumber() : num                                           │
+│+displayValues() : void                                            │
+└───────────────────────────────────────────────────────────────────┘
+              ↑                              ↑
+              ↑                              ↑
+              ↑                              ↑
+┌─────────────────────────────┐┌─────────────────────────────────────┐
+│BasketballPlayer             ││BaseballPlayer                       │
+├─────────────────────────────┤├─────────────────────────────────────┤
+│-position : string           ││-position : string                   │
+│-freeThrowPercentage : num   ││-battingAverage : num                │
+├─────────────────────────────┤├─────────────────────────────────────┤
+│+setPosition(pos : string)   ││+setPosition(pos : string)           │
+│+getPosition() : string      ││+getPosition() : string              │
+│+setFreeThrowPercentage(avg) ││+setBattingAverage(avg)              │
+│+getFreeThrowPercentage()    ││+getBattingAverage() : num           │
+│+displayBasketballValues()   ││+displayBaseballValues() : void      │
+└─────────────────────────────┘└─────────────────────────────────────┘
+/*
+
+class Player
+    Declarations
+        private string playerName
+        private num playerNumber
+
+    public void setPlayerName(string name)
+        playerName = name
+    return
+
+    public string getPlayerName()
+    return playerName
+
+    public void setPlayerNumber(int number)
+        playerNumber = number
+    return
+
+    public num getPlayerNumber()
+    return playerNumber
+
+    public void displayValues()
+        output "Player Name: ", playerName
+        output "Player Number: ", playerNumber
+    return
+endClass
+
+class BaseballPlayer inheritsFrom Player
+    Declarations
+        private string position
+        private num battingAverage
+
+    public void setPosition(string pos)
+        position = pos
+    return
+
+    public string getPosition()
+    return position
+
+    public void setBattingAverage(num avg)
+        battingAverage = avg
+    return
+
+    public num getBattingAverage()
+    return battingAverage
+
+    public displayBaseballValues()
+        displayValues()
+        output "Position: ", position
+        output "Batting Average: ", battingAverage
+    return
+
+endClass
+
+class BasketballPlayer inheritsFrom Player
+    Declarations
+        private string position
+        private num freeThrowPercentage
+
+    public void setPosition(string pos)
+        position = pos
+    return
+
+    public string getPosition()
+    return position
+
+    public void setFreeThrowPercentage(num avg)
+        freeThrowPercentage = avg
+    return
+
+    public num getFreeThrowPercentage()
+    return freeThrowPercentage
+
+    public displayBasketballValues()
+        displayValues()
+        output "Position: ", position
+        output "Free Throw Percentage: ", freeThrowPercentage
+    return
+
+endClass
+
+start
+    Declarations
+        Player player
+        BaseballPlayer baseballPlayer
+        BasketballPlayer basketballPlayer
+
+    player.setPlayerName("John Doe")
+    player.setPlayerNumber(1)
+
+    baseballPlayer.setPlayerName("Jane Doe")
+    baseballPlayer.setPlayerNumber(2)
+    baseballPlayer.setPosition("Pitcher")
+    baseballPlayer.setBattingAverage(0.300)
+
+    basketballPlayer.setPlayerName("Jack Doe")
+    basketballPlayer.setPlayerNumber(3)
+    basketballPlayer.setPosition("Center")
+    basketballPlayer.setFreeThrowPercentage(0.750)
+
+    player.displayValues()
+    baseballPlayer.displayBaseballValues()
+    basketballPlayer.displayBasketballValues()
+
+stop
