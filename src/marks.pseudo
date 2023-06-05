@@ -1,0 +1,15 @@
+start
+    Declarations
+        num test1
+        num test2
+        num assignment
+        num semesterMark //return value
+    output "Please enter test one's mark (percentage)" //test one's prompt
+    input test1
+    output "Please enter test two's mark (percentage)" //test two's prompt
+    input test2
+    output "Please enter the assignment's mark (percentage)" //assignment's prompt
+    input assignment
+    semesterMark = (test1 * 15 + test2 * 15 + assignment * 20)/100 //calculation
+    output "Semester mark is ", semesterMark
+stop

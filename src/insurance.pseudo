@@ -1,0 +1,37 @@
+start
+    Declarations
+        num policyNum
+        num premium
+        string type
+        num QUIT = 999
+    output "Enter a policy number or ", QUIT, " to quit"
+    input policyNum
+    while policyNum <> QUIT
+        type = getPolicyType()
+        premium = setPremium(type)
+        output "The premium is ", premium
+        output "Enter a policy number or ", QUIT, " to quit"
+        input policyNum
+    endwhile
+stop
+
+string getPolicyType()
+    Declarations
+        string type
+    output "Enter in the policy type (health or auto)"
+    input type
+    while type <> "health" AND type <> "auto"
+        output "Enter in the policy type (health or auto)"
+        input type
+    endwhile
+return type
+
+num setPremium(string type)
+    Declarations
+        num premium
+    if type = "auto" then
+        premium = 225
+    else
+        premium = 550
+    endif
+return premium

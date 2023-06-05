@@ -1,0 +1,43 @@
+start
+    Declarations
+        num price = 0
+        num discount = 0.7
+        string wineType
+        string wineGrade
+        num numBottles
+        num priceRegular
+        num pricePremium
+        string shouldContinue = “Y”
+    while shouldContinue = “Y”
+        prompts()
+        wine()
+        output “Would you like to buy more wine? Y or N”
+        input shouldContinue
+    endwhile
+    finish()
+stop
+
+prompts()
+	output “Enter number of bottles”
+	input numBottles
+	output “Red or white?”
+	input wineType
+	output “Regular or premium?”
+	input wineGrade
+return
+
+wine()
+	if wineGrade = “regular” then
+		if wineType=”white” then
+			price = price + priceRegular * discount * numBottles
+		else
+			price = price + priceRegular * numBottles
+		endif
+	else
+		price = price + pricePremium * numBottles
+	endif
+return
+
+finish()
+	output “Your total fee comes to”, price
+return

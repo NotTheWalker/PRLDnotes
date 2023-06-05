@@ -1,0 +1,30 @@
+start
+    Declarations
+        num x
+        num CURRENT_LENGTH = 0
+        num numbers[LENGTH]
+        string QUIT
+    x = 0
+    CURRENT_LENGTH = LENGTH
+
+stop
+
+num[] inputTwentyNumbers(num currentLength)
+    Declarations
+        num x
+        num LENGTH = 20
+        num newLength = currentLength + LENGTH
+        num[] newNumbers = num[newLength]
+    x = 0
+    while x > newLength
+        if x > currentLength then
+            output "Enter a number (", x+1, ")"
+            input newNumbers[x]
+        else
+            newNumbers[x] =
+        x = x+1
+    endwhile
+
+
+
+

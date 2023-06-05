@@ -1,0 +1,11 @@
+//old
+if x > 10 then
+    if y > 1 then
+        output "Y"
+    endif
+endif
+
+//new
+if x > 10 AND y > 1 then
+    output "Y"
+endif

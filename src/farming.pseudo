@@ -1,0 +1,50 @@
+start
+    Declarations
+        num TOM_P = 20
+        num GBE_P = 15
+        num SPI_P = 10
+        num TOM_A = 0
+        num GBE_A = 0
+        num SPI_A = 0
+        num answer = 0
+        num discount = 0
+        num total
+    output "Do you want to purchase tomatoes? (1:Yes, 0:No)"
+    input answer
+    if answer<>0 then
+        output "Enter the amount (kilos)"
+        input TOM_A
+    endif
+    output "Do you want to purchase green beans? (1:Yes, 0:No)"
+    input answer
+    if answer<>0 then
+        output "Enter the amount (kilos)"
+        input GBE_A
+    endif
+    output "Do you want to purchase spinach? (1:Yes, 0:No)"
+    input answer
+    if answer<>0 then
+        output "Enter the amount (kilos)"
+        input SPI_A
+    endif
+    discount = discountCalc(TOM_A)
+    total = total + TOM_A * TOM_P * (1 - discount)
+    discount = discountCalc(GBE_A)
+    total = total + GBE_A * GBE_P * (1 - discount)
+    discount = discountCalc(SPI_A)
+    total = total + SPI_A * SPI_P * (1 - discount)
+    output "JOSEPH'S FARM VEGETABLES"
+    output "Your total comes to: R", total
+stop
+
+num discountCalc(num amount)
+    Declarations
+        num DISCOUNT_LIMIT = 3
+        num DISCOUNT_NORM = 0.1
+        num discount
+    if amount >= DISCOUNT_LIMIT then
+        discount = DISCOUNT_NORM
+    else
+        discount = 0
+    endif
+return discount

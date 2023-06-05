@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>question-2_1.pseudo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #74118c;}
+.s3 { color: #800000;}
+.s4 { color: #1750eb;}
+.s5 { color: #808080; font-style: italic;}
+.s6 { color: #067d17;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+question-2_1.pseudo</font>
+</center></td></tr></table>
+<pre><span class="s0">start</span>
+    <span class="s2">Declarations</span>
+        <span class="s3">num </span><span class="s1">LENGTH = </span><span class="s4">12</span>
+        <span class="s3">num </span><span class="s1">totalOrders = </span><span class="s4">0</span>
+        <span class="s3">num </span><span class="s1">discount = </span><span class="s4">0 </span><span class="s5">// 0% discount by default</span>
+        <span class="s3">num </span><span class="s1">purchases[LENGTH]</span>
+        <span class="s3">num </span><span class="s1">counter = </span><span class="s4">0</span>
+    <span class="s0">while </span><span class="s1">counter &lt; LENGTH </span><span class="s5">// loop through each month</span>
+        <span class="s5">// get the number of purchases for the current month</span>
+        <span class="s1">purchases[counter] = inputPurchase(counter + </span><span class="s4">1</span><span class="s1">)</span>
+        <span class="s5">// add the number of purchases to the total</span>
+        <span class="s1">totalOrders = totalOrders + purchases[counter]</span>
+        <span class="s5">// increment the counter</span>
+        <span class="s1">counter = counter + </span><span class="s4">1</span>
+    <span class="s0">endwhile</span>
+    <span class="s0">if </span><span class="s1">totalOrders &gt;= </span><span class="s4">11 </span><span class="s0">then</span>
+        <span class="s5">// if the total number of orders is greater than or equal to 11</span>
+        <span class="s1">discount = </span><span class="s4">20</span>
+    <span class="s0">else if </span><span class="s1">totalOrders &gt;= </span><span class="s4">6 </span><span class="s0">then</span>
+        <span class="s5">// if the total number of orders is greater than or equal to 6</span>
+        <span class="s1">discount = </span><span class="s4">10</span>
+    <span class="s0">endif</span>
+    <span class="s5">// output the total number of orders and the discount</span>
+    <span class="s0">output </span><span class="s6">&quot;Total number of orders: &quot;</span><span class="s1">, totalOrders</span>
+    <span class="s0">output </span><span class="s6">&quot;Discount: &quot;</span><span class="s1">, discount, </span><span class="s6">&quot;%&quot;</span>
+<span class="s0">stop</span>
+
+<span class="s3">num </span><span class="s1">inputPurchase(</span><span class="s3">num </span><span class="s1">curMonth)</span>
+    <span class="s2">Declarations</span>
+        <span class="s3">num </span><span class="s1">purchase = </span><span class="s4">0</span>
+    <span class="s5">// prompt the user for the number of purchases for the current month</span>
+    <span class="s0">output </span><span class="s6">&quot;Enter the number of purchases for month &quot; </span><span class="s1">+ curMonth</span>
+    <span class="s5">// get the number of purchases for the current month</span>
+    <span class="s0">input </span><span class="s1">purchase</span>
+<span class="s0">return </span><span class="s1">purchase</span></pre>
+</body>
+</html>

@@ -1,0 +1,82 @@
+start
+    Declarations
+        num PIN = 1234
+        num attempt
+        num balance = 50
+        num auth
+        num QUIT = 999
+        num deposit = 0
+        num withdraw = 0
+        num option
+    auth = 0
+    output "Enter your PIN number"
+    input attempt
+    auth = checkPIN(attempt, PIN)
+    while auth==0
+        output "Incorrect PIN number, please try again or enter ", QUIT, " to quit"
+        input attempt
+        if attempt=QUIT then
+            auth = 1
+        else
+            auth = checkPIN(attempt, PIN)
+        endif
+    endwhile
+    if attempt<>QUIT then
+        option = 0
+        while option <> QUIT
+            output "Select a transaction:"
+            output "1: Withdraw"
+            output "2: Deposit"
+            output "3: Check balance"
+            output "999: Quit"
+            input option
+            if option=1 then
+                balance = withdraw(balance)
+            else if option=2 then
+                balance = deposit(balance)
+            endif
+        endwhile
+    else
+        output "Exiting ATM"
+    endif
+stop
+
+num checkPIN(num pinIn, num pinRef)
+    Declarations
+        num auth
+    if pinIn = pinRef then
+        auth = 1
+    else
+        auth = 0
+    endif
+return auth
+
+num withdraw(num curBalance)
+    Declarations
+        num withdrawalAmount
+    output "Enter withdrawal amount:"
+    input withdrawalAmount
+    if withdrawalAmount>curBalance then
+        curBalance = curBalance - withdrawalAmount
+        output "Withdrawing R", withdrawalAmount
+    else
+        output "Insufficient funds!"
+    endif
+return curBalance
+
+num deposit(num curBalance)
+    Declarations
+        num depositAmount
+    output "Enter deposit amount:"
+    input depositAmount
+    if depositAmount>0 then
+            curBalance = curBalance + depositAmount
+            output "Depositing R", depositAmount
+        else
+            output "Invalid deposit amount!"
+        endif
+return curBalance
+
+void balance()
+
+return
