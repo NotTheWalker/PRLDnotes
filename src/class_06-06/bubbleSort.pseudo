@@ -1,31 +1,53 @@
 start
     Declarations
-        num SIZE = 4
-        num array[4] = 16, 5, 3, 24
-        num response
+        num SIZE = 4 //size of array
+        num array[4] = 16, 5, 3, 24 //array to be sorted
+        num response //user response to search
+        num searches = 0 //number of searches
     output "Would you like to search the array? (1 = yes, 0 = no): "
     input response
-    while response = 1
-        searchArray(SIZE, array)
+    searches = searches + response //add response to searches
+    while response = 1 //while user wants to search
+        searchArray(SIZE, array) //search array
+        //ask user if they want to search again
         output "Would you like to search the array again? (1 = yes, 0 = no): "
         input response
+        searches = searches + response //add response to searches
     endwhile
+    if searches = 0 then //if no searches were made
+        output "No value was searched for."
+    endif
 stop
 
 void searchArray(num SIZE, num[] array)
     Declarations
-        num found = -1
-        num value
+        num found = -1 //index of found value, -1 if not found
+        num value //value to search for
+    sortArray(SIZE, array)
     output "Enter a value to search for: "
     input value
     for num i = 0 to SIZE - 1 step 1
-        if array[i] = value then
-            found = i
+        if array[i] = value then //value found
+            found = i //set found to index of value
         endif
     endfor
-    if found = -1 then
+    if found = -1 then //value not found
         output "The value was not found."
     else
         output "The value was found at index ", found
     endif
+return
+
+void sortArray(num SIZE, num[] array) //bubble sort
+    Declarations
+        num temp //used for swapping
+    for num i = 0 to SIZE - 1 step 1
+        for num j = 0 to SIZE - 2 step 1
+            if array[j] > array[j + 1] then
+                temp = array[j] //swap
+                array[j] = array[j + 1]
+                array[j + 1] = temp
+            endif
+        endfor
+    endfor
 return

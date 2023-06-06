@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a33ca027-8821-48f9-9610-a603b43b1ac4" name="Changes" comment="All changes as of assignment submission">
-      <change afterPath="$PROJECT_DIR$/src/class_06-06/customerDetails.pseudo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class_06-06/rentals.pseudo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a33ca027-8821-48f9-9610-a603b43b1ac4" name="Changes" comment="Class questions from 06-06" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +117,7 @@
       <workItem from="1685695374488" duration="5380000" />
       <workItem from="1685967774446" duration="210000" />
       <workItem from="1685967996270" duration="5926000" />
-      <workItem from="1686031987022" duration="1689000" />
+      <workItem from="1686031987022" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="Bringing git up to date">
       <created>1685967806306</created>
@@ -165,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685991967995</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Class questions from 06-06">
+      <created>1686034113609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686034113609</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +191,8 @@
     <MESSAGE value="Moved unruly pseudocode files to their proper place" />
     <MESSAGE value="Removed unneeded directories" />
     <MESSAGE value="All changes as of assignment submission" />
-    <option name="LAST_COMMIT_MESSAGE" value="All changes as of assignment submission" />
+    <MESSAGE value="Class questions from 06-06" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class questions from 06-06" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
