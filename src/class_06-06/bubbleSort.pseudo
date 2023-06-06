@@ -1,0 +1,31 @@
+start
+    Declarations
+        num SIZE = 4
+        num array[4] = 16, 5, 3, 24
+        num response
+    output "Would you like to search the array? (1 = yes, 0 = no): "
+    input response
+    while response = 1
+        searchArray(SIZE, array)
+        output "Would you like to search the array again? (1 = yes, 0 = no): "
+        input response
+    endwhile
+stop
+
+void searchArray(num SIZE, num[] array)
+    Declarations
+        num found = -1
+        num value
+    output "Enter a value to search for: "
+    input value
+    for num i = 0 to SIZE - 1 step 1
+        if array[i] = value then
+            found = i
+        endif
+    endfor
+    if found = -1 then
+        output "The value was not found."
+    else
+        output "The value was found at index ", found
+    endif
+return

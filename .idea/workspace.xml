@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a33ca027-8821-48f9-9610-a603b43b1ac4" name="Changes" comment="Bringing git up to date" />
+    <list default="true" id="a33ca027-8821-48f9-9610-a603b43b1ac4" name="Changes" comment="All changes as of assignment submission">
+      <change afterPath="$PROJECT_DIR$/src/class_06-06/customerDetails.pseudo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class_06-06/rentals.pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +23,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="910eacf2-c4fe-4711-b00d-3c4c227effca" />
+        <option name="url" value="https://github.com/NotTheWalker/PRLDnotes.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="2PMUmD48l0ltBwLWJPMFiMkUmIN" />
   <component name="ProjectViewState">
@@ -35,14 +51,18 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40344828&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/TakeHomeTest" />
+      <recent name="$PROJECT_DIR$/src/class_06-06" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/TakeHomeTest" />
     </key>
   </component>
   <component name="RunManager">
@@ -82,19 +102,6 @@
       <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="PRLDnotes" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="PRLDnotes" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -113,6 +120,8 @@
       <workItem from="1685607010026" duration="3275000" />
       <workItem from="1685695374488" duration="5380000" />
       <workItem from="1685967774446" duration="210000" />
+      <workItem from="1685967996270" duration="5926000" />
+      <workItem from="1686031987022" duration="1689000" />
     </task>
     <task id="LOCAL-00001" summary="Bringing git up to date">
       <created>1685967806306</created>
@@ -128,7 +137,35 @@
       <option name="project" value="LOCAL" />
       <updated>1685967902514</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bringing git up to date (2)">
+      <created>1685971193924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685971193924</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Moved unruly pseudocode files to their proper place">
+      <created>1685971304842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685971304842</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Removed unneeded directories">
+      <created>1685973351446</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685973351446</updated>
+    </task>
+    <task id="LOCAL-00006" summary="All changes as of assignment submission">
+      <created>1685991967995</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685991967995</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +184,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bringing git up to date" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bringing git up to date" />
+    <MESSAGE value="Bringing git up to date (2)" />
+    <MESSAGE value="Moved unruly pseudocode files to their proper place" />
+    <MESSAGE value="Removed unneeded directories" />
+    <MESSAGE value="All changes as of assignment submission" />
+    <option name="LAST_COMMIT_MESSAGE" value="All changes as of assignment submission" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

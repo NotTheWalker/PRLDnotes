@@ -1,0 +1,21 @@
+start
+    Declarations
+        num dayOfMonth
+        num dayCutOff = 14
+        num maxRentalPeriod = 7
+        num returnDate
+    dayOfMonth = dateInput()
+    while dayOfMonth > dayCutOff
+        output "The start date of the rental period must be before the 14th of the month"
+        dayOfMonth = dateInput()
+    endwhile
+    returnDate = dayOfMonth + maxRentalPeriod
+    output "The return date is " + returnDate
+stop
+
+num dateInput()
+    Declarations
+        num dayOfMonth
+    output "Enter the start date of the rental period"
+    input dayOfMonth
+return dayOfMonth

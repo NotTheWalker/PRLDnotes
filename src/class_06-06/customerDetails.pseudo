@@ -1,0 +1,13 @@
+start
+    Declarations
+        string name
+        string surname
+        num telNumber
+    output "Please enter your name"
+    input name
+    output "Please enter your surname"
+    input surname
+    output "Please enter your telephone number"
+    input telNumber
+    output "Customer details successfully captured."
+stop
