@@ -1,0 +1,16 @@
+┌──────────────────────────────────┐
+│Joseph                            │
+├──────────────────────────────────┤
+│-occupation: String               │
+│-employer: String                 │
+│-jobDescription: String           │
+├──────────────────────────────────┤
+│+getOccupation(): String          │
+│+getEmployer(): String            │
+│+getJobDescription(): String      │
+│+setOccupation(String): void      │
+│+setEmployer(String): void        │
+│+setJobDescription(String): void  │
+└──────────────────────────────────┘
+```
+

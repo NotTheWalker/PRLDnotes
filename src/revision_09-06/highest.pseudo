@@ -1,0 +1,17 @@
+start
+    Declarations
+        num number1
+        num number2
+        num number3
+        num highest
+    output "Enter three numbers: "
+    input number1, number2, number3
+    highest = number1
+    if highest < number2 then
+        highest = number2
+    endif
+    if highest < number3 then
+        highest = number3
+    endif
+    output "The highest number is ", highest
+stop

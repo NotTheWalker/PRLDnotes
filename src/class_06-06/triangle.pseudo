@@ -1,0 +1,10 @@
+start
+    Declarations
+        num height
+        num width
+        num response
+    output "Select a type of triangle: "
+    output "1: Right Triangle"
+    output "2: Isosceles Triangle"
+    //TODO: Implement trigonometry via algebra or something lmao
+stop

@@ -1,0 +1,10 @@
+1.1: Planning the logic.
+    Pseudocode is not an actual programming language, but rather a plain English description of the program's logic.
+    It can be used to plan out the program before writing any code. Therefor it is an appropriate tool for logic planning.
+
+1.2: A variable named "3rdXYZ" is an inappropriate variable name for multiple reasons.
+    Firstly the variable name starts with a number, which is not allowed.
+    Secondly the variable name contains a special character, which is also not allowed.
+    Thirdly the variable name is not descriptive enough, it does not tell us what the variable is used for.
+
+1.4: Programming environment. The presence of coding syntax indicates this is a programming environment, not a user environment.

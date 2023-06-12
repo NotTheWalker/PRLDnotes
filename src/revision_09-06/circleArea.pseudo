@@ -1,0 +1,16 @@
+start
+    Declarations
+        num radius
+        num area
+    output "Enter radius: "
+    input radius
+    area = calculateArea(radius)
+    output "The area is " + area
+stop
+
+num calculateArea(num radius)
+    Declarations
+        num PI = 3.14159 //approximation of pi
+        num areaOfCircle
+    areaOfCircle = PI * radius * radius //area of circle formula
+return areaOfCircle

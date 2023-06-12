@@ -1,0 +1,148 @@
+class math
+    Declarations
+        num e = 2.7182818284590452353602874713527 //e (Euler's number)
+        num pi = 3.1415926535897932384626433832795 //pi (ratio of a circle's circumference to its diameter)
+        num tau = 6.283185307179586476925286766559 //2pi (ratio of a circle's circumference to its radius)
+        num phi = 1.6180339887498948482045868343656 //golden ratio
+
+        num DEFAULT_SQRT_ITERATIONS = 10 //default number of iterations to use for square root approximation
+        num DEFAULT_TRIG_ITERATIONS = 10 //default number of iterations to use for trigonometric function approximation
+
+    public num abs(num x)
+        Declarations
+            num y
+        if x < 0
+            y = 0-x //negate x
+        else
+            y = x //x is positive
+        endif
+    return y
+
+    public num isIntegerBetween(num x, num lowerBound, num upperBound) //returns 1 if x is an integer between lowerBound and upperBound, 0 otherwise
+        Declarations
+            num y = 0
+        for i = lowerBound to upperBound step 1
+            if x = i
+                y = 1
+            endif
+        endfor
+    return y
+
+    public num signum(num x) //
+        Declarations
+            num y
+        if x < 0
+            y = -1 //x is negative
+        else if x = 0
+            y = 0 //x is 0
+        else
+            y = 1 //x is positive
+        endif
+    return y
+
+    //note that pseudocode doesn't have implicit rounding
+    public num mod(num dividend, num divisor) //remainder of dividend/divisor
+        Declarations
+            num remainder
+            num absDividend
+            num absDivisor
+            num signDividend
+            num signDivisor
+            num signRemainder
+
+        absDividend = abs(dividend)
+        absDivisor = abs(divisor)
+        signDividend = signum(dividend)
+        signDivisor = signum(divisor)
+        signRemainder = signDividend * signDivisor
+        if dividend = divisor
+            remainder = 0
+        else
+            remainder = absDividend
+            while remainder > absDivisor
+                remainder = remainder - absDivisor
+            endwhile
+        endif
+        remainder = remainder * signRemainder
+    return remainder
+
+    public num floor(num x) //rounds x down to the nearest integer
+        Declarations
+            num y
+        y = x - mod(x, 1)
+    return y
+
+    public num sqrt(num x, num iterations)
+        Declarations
+            num y
+        y = x
+        for i = 0 to iterations step 1 //iterate to get closer to the actual value
+            y = approximateSqrt(x, y) //approximate the square root
+        endfor
+    return y
+
+    public num sqrt(num x)
+        Declarations
+            num y
+        y = sqrt(x, DEFAULT_SQRT_ITERATIONS) //use default number of iterations
+    return y
+
+    private num approximateSqrt(num x, num approximateGuess)
+        Declarations
+            num y
+        y = (x + x/approximateGuess)/2 //approximate the square root
+    return y
+
+    public num pow(num x, num y) //x^y
+        Declarations
+            num z
+
+        if y<0 then
+            //negative exponent
+            z = 1/pow(x, 0-y)
+        else if y=0 then
+            //exponent is 0
+            z = 1
+        else
+            //positive exponent
+            z = x
+            for i = 0 to y step 1
+                z = z * x
+            endfor
+        endif
+    return z
+
+    public num exp(num y) //Euler's number to the power of y
+        Declarations
+            num x
+        x = pow(e, y)
+    return x
+
+    public hypot(num x, num y) //hypotenuse of a right triangle with sides x and y
+        Declarations
+            num z
+        z = sqrt(pow(x, 2) + pow(y, 2))
+    return z
+
+    public num log(num x, num iterations) //natural logarithm of x
+        Declarations
+            num y
+        y = 0
+        for i = 0 to iterations step 1
+            y = y + (pow(-1, i) * pow(x-1, i+1))/(i+1)
+        endfor
+    return y
+
+    public num factorial(num x) //x!
+        Declarations
+            num y
+        y = 1
+        for i = 1 to x step 1
+            y = y * i
+        endfor
+    return y
+
+
+
+
+endClass

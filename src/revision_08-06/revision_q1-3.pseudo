@@ -1,0 +1,5 @@
+start
+    for counter = 3 to 12 step 3
+        output counter
+    endfor
+stop
